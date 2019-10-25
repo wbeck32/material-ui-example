@@ -1,14 +1,10 @@
 import React from 'react';
-import Header from './src/components/common/Header';
-import ActionAreaContainer from './src/components/containers/ActionAreaContainer';
-import Footer from './src/components/common/Footer';
+import PageContainer from './src/components/containers/PageContainer';
 
-const App = props => {
+const App = () => {
 	return (
 		<div>
-			<Header />
-			<ActionAreaContainer />
-			<Footer />
+			<PageContainer key={true} />
 		</div>
 	);
 };
