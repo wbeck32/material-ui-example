@@ -1,37 +1,36 @@
 import React from 'react';
-import {
-	createMuiTheme,
-	makeStyles,
-	ThemeProvider,
-} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles => ({
 	root: {
-		border: '5px solid red',
+		background: '#0078B3',
+		borderRadius: 0,
+		border: 0,
+		color: 'white',
+		height: 48,
+		padding: '17px 0',
+		textTransform: 'none',
 	},
-}));
+});
 
 const classes = useStyles();
-const myButton = React.forwardRef((props, ref) => (
-	<button ref={ref} className={classes.root}></button>
-));
 
-const ref = React.createRef();
-<myButton ref={ref}>Click?</myButton>;
+const KpButton = props => {
+	console.log('classes: ', classes);
+	const refContainer = React.useRef('hello');
+	const handleClick = e => {
+		console.log('e: ', e);
+		refContainer.current.focus();
+	};
 
-// const theme = createMuiTheme({
-// 	status: {
-// 		danger: 'red',
-// 	},
-// });
-
-// export default function CustomStyles() {
-// 	return (
-// 		<ThemeProvider theme={theme}>
-// 			<KpButton />
-// 		</ThemeProvider>
-// 	);
-// }
+	return (
+		<Button
+			ref={refContainer}
+			onClick={handleClick}
+			className={classes.root}
+		></Button>
+	);
+};
 
 export default KpButton;

@@ -1,10 +1,10 @@
 import React from 'react';
-import KpButtonV2 from '../formInputs/KpButtonV2';
+import KpButton from '../formInputs/KpButton';
 
 const ActionArea = props => {
 	return (
 		<div>
-			<KpButtonV2>button</KpButtonV2>
+			<KpButton>button</KpButton>
 		</div>
 	);
 };
