@@ -1,8 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Button } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
-const useStyles = makeStyles => ({
+const MyButton = styled(Button)({
 	root: {
 		background: '#0078B3',
 		borderRadius: 0,
@@ -13,18 +13,21 @@ const useStyles = makeStyles => ({
 		textTransform: 'none',
 	},
 });
-
-const classes = useStyles();
+const ref = React.createRef('hello');
 
 const KpButton = props => {
-	const ref = React.createRef();
+	console.log('props: ', props);
+	console.log('ref: ', ref);
 	const handleClick = e => {
 		console.log('e: ', e.target);
 		ref.current.focus();
 	};
-
 	return (
-		<button ref={ref} onClick={handleClick} className={classes.root}></button>
+		<MyButton
+			ref={ref}
+			children={props.children}
+			onClick={handleClick}
+		></MyButton>
 	);
 };
 
