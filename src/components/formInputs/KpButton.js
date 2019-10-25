@@ -17,19 +17,14 @@ const useStyles = makeStyles => ({
 const classes = useStyles();
 
 const KpButton = props => {
-	console.log('classes: ', classes);
-	const refContainer = React.useRef('hello');
+	const ref = React.createRef();
 	const handleClick = e => {
-		console.log('e: ', e);
-		refContainer.current.focus();
+		console.log('e: ', e.target);
+		ref.current.focus();
 	};
 
 	return (
-		<Button
-			ref={refContainer}
-			onClick={handleClick}
-			className={classes.root}
-		></Button>
+		<button ref={ref} onClick={handleClick} className={classes.root}></button>
 	);
 };
 

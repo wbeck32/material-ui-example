@@ -10,22 +10,17 @@ class PageContainer extends Component {
 			key: false,
 		};
 	}
-	componentDidMount = () => {
-		// myRef only has a current property
-		// console.log('this.myRef: ', this.myRef);
-		// // myRef.current is what we are interested in
-		// console.log('this.myRef.current: ', this.myRef.current);
-		// // focus our input automatically when component mounts
-		// this.myRef.current.focus();
+
+	componentDidCatch = (err, errInfo) => {
+		console.log('err, errInfo: ', err, errInfo);
 	};
 
 	render() {
-		console.log('this: ', this);
 		const { key } = this.state;
 		return (
 			<div>
 				<Header />
-				<ActionArea key={'key'} />
+				<ActionArea key={key} />
 				<Footer />
 			</div>
 		);
