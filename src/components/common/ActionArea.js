@@ -4,7 +4,7 @@ import KpButton from '../formInputs/KpButton';
 const ActionArea = () => {
 	return (
 		<div>
-			<KpButton>button</KpButton>
+			<KpButton>Primary Button</KpButton>
 		</div>
 	);
 };

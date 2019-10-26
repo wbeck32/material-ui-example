@@ -16,12 +16,16 @@
 	"license": "ISC",
 	"dependencies": {
 		"babel-node": "0.0.1-security",
+		"jss-plugin-default-unit": "^10.0.0",
+		"jss-plugin-props-sort": "^10.0.0",
 		"react": "^16.10.2",
 		"react-dom": "^16.10.2",
+		"react-hot-loader": "^4.12.15",
 		"react-redux": "^7.1.1",
 		"redux": "^4.0.4",
 		"redux-logger": "^3.0.6",
-		"redux-saga": "^1.1.1"
+		"redux-saga": "^1.1.1",
+		"theming": "^3.2.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.6.4",
@@ -50,6 +54,7 @@
 		"node-bourbon": "^4.2.8",
 		"node-neat": "^2.0.0-beta.0",
 		"node-sass": "^4.12.0",
+		"react-jss": "^10.0.0",
 		"react-select": "^3.0.8",
 		"webpack": "^4.41.2",
 		"webpack-cli": "^3.3.9",

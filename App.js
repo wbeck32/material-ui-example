@@ -1,12 +1,20 @@
 import React from 'react';
-import PageContainer from './src/components/containers/PageContainer';
+import { ThemeProvider } from 'theming';
 
+import { hot } from 'react-hot-loader/root';
+import PageContainer from './src/components/containers/PageContainer';
+const theme = {
+	color: 'black',
+	background: 'white',
+};
 const App = () => {
 	return (
 		<div>
-			<PageContainer key={true} />
+			<ThemeProvider theme={theme}>
+				<PageContainer key={true} />
+			</ThemeProvider>
 		</div>
 	);
 };
 
-export default App;
+export default hot(App);
