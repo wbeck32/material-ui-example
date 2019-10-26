@@ -12,7 +12,7 @@ class ActionAreaContainer extends Component {
 	}
 
 	render() {
-		console.log('this: ', this.state);
+		console.log('this in actionarea container: ', this.state);
 		return (
 			<div>
 				<ActionArea>

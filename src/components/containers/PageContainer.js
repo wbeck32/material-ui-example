@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import Header from '../common/Header';
 import ActionArea from '../common/ActionArea';
 import Footer from '../common/Footer';
+import useTheme from '@material-ui/core/styles/useTheme';
 
 class PageContainer extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			key: false,
-			theme: '',
 		};
 	}
 	componentDidCatch = (err, errInfo) => {
@@ -16,12 +16,14 @@ class PageContainer extends Component {
 	};
 
 	render() {
-		console.log('this: ', this);
+		console.log('this in page container: ', this);
 		const { key } = this.state;
+		// const theme = (useTheme = () => {});
+		// console.log('theme: ', theme);
 		return (
 			<div>
 				<Header />
-				<ActionArea key={key} />
+				<ActionArea key={key} theme={this.props.theme} />
 				<Footer />
 			</div>
 		);

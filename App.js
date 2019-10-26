@@ -1,12 +1,9 @@
 import React from 'react';
 import { ThemeProvider } from 'theming';
-
 import { hot } from 'react-hot-loader/root';
 import PageContainer from './src/components/containers/PageContainer';
-const theme = {
-	color: 'black',
-	background: 'white',
-};
+import theme from './src/static/themeProps';
+
 const App = () => {
 	return (
 		<div>

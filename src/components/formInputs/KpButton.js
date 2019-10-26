@@ -3,8 +3,7 @@ import testing from '../../../testing';
 const { button } = testing['@global'];
 
 const KpButton = props => {
-	console.log('testing: ', testing);
-	console.log('button: ', button);
+	console.log('props: ', props);
 	const ref = React.createRef();
 	const handleClick = e => {
 		console.log('e: ', e.target);
