@@ -8,14 +8,15 @@ class PageContainer extends Component {
 		super(props);
 		this.state = {
 			key: false,
+			theme: '',
 		};
 	}
-
 	componentDidCatch = (err, errInfo) => {
 		console.log('err, errInfo: ', err, errInfo);
 	};
 
 	render() {
+		console.log('this: ', this);
 		const { key } = this.state;
 		return (
 			<div>

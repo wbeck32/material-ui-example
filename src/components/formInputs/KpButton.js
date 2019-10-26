@@ -3,6 +3,7 @@ import testing from '../../../testing';
 const { button } = testing['@global'];
 
 const KpButton = props => {
+	console.log('testing: ', testing);
 	console.log('button: ', button);
 	const ref = React.createRef();
 	const handleClick = e => {
@@ -12,7 +13,7 @@ const KpButton = props => {
 
 	return (
 		<button
-			style={button.button}
+			style={button}
 			ref={ref}
 			children={props.children}
 			onClick={handleClick}
