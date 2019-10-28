@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'theming';
 import { hot } from 'react-hot-loader/root';
 import PageContainer from './src/components/containers/PageContainer';
-import theme from './src/static/themeProps';
+import theme from './src/static/theme/theme';
 
 const App = () => {
 	return (

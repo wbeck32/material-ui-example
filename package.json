@@ -25,6 +25,7 @@
 		"redux": "^4.0.4",
 		"redux-logger": "^3.0.6",
 		"redux-saga": "^1.1.1",
+		"styleguide": "^3.10.13",
 		"theming": "^3.2.0"
 	},
 	"devDependencies": {
@@ -42,6 +43,7 @@
 		"eslint": "^6.5.1",
 		"eslint-plugin-react": "^7.16.0",
 		"file-loader": "^4.2.0",
+		"gifsicle": "^4.0.1",
 		"gulp": "^4.0.2",
 		"gulp-clean-css": "^4.2.0",
 		"gulp-debug": "^4.0.0",

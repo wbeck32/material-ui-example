@@ -21,7 +21,7 @@ const watchCss = () => {
             includePaths: []
               .concat(require('bourbon').includePaths)
               .concat(require('bourbon-neat').includePaths),
-            outputStyle: 'compressed',
+            // outputStyle: 'compressed',
           }).on('error', sass.logError)
         )
         .pipe(cleanCSS())
