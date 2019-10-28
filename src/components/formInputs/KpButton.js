@@ -1,7 +1,10 @@
 import React from 'react';
-import testing from '../../../testing';
-const { button } = testing['@global'];
-import { useTheme } from '@material-ui/core/styles';
+import { useTheme, withStyles } from '@material-ui/core/styles';
+import KpButtonCss from './KpButton.css';
+
+const KpBS = withStyles({
+	root: { KpButtonCss },
+})(({ classes }) => <button className={classes}>{classes.root}</button>);
 
 const KpButton = props => {
 	const kpTheme = useTheme();
@@ -12,12 +15,15 @@ const KpButton = props => {
 	};
 
 	return (
-		<button
-			className={kpTheme.palette.common.black}
-			ref={ref}
-			children={props.children}
-			onClick={handleClick}
-		></button>
+		<div>
+			<KpBS />
+			<button
+				className={kpTheme.palette.common.black}
+				ref={ref}
+				children={props.children}
+				onClick={handleClick}
+			></button>
+		</div>
 	);
 };
 
