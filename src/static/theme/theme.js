@@ -61,22 +61,24 @@ const theme = {
     gutters: fns.gutters,
     toolbar: {},
   },
-  overrides: {},
+  overrides: {
+    button: {
+      border: '5px solid blue',
+    },
+  },
   palette: {
-    common: {},
-    type: '',
-    primary: {},
-    secondary: {},
-    error: {},
-    grey: {},
-    contrastThreshold: 3,
-    getContrastText: fns.getContrastText,
-    augmentColor: fns.augmentColor,
-    tonalOffset: 0.2,
-    text: {},
-    divider: 'rgba(0,0,0,0.12)',
-    background: {},
-    action: {},
+    common: {
+      main: '#ffff',
+    },
+    primary: {
+      midnight: '#003b71',
+      'kp-blue': '#0078b3',
+      sky: '#90cef1',
+      main: '#000000',
+    },
+    secondary: {
+      main: '#f44336',
+    },
   },
   props: {},
   shadows: [

@@ -1,14 +1,13 @@
 import React from 'react';
-import { useTheme, withStyles } from '@material-ui/core/styles';
-import KpButtonCss from './KpButton.css';
-
-const KpBS = withStyles({
-	root: { KpButtonCss },
-})(({ classes }) => <button className={classes}>{classes.root}</button>);
+import { useTheme } from '@material-ui/core/styles';
+import KpButtonStyles from './KpButtonStyles';
+import { Button } from '@material-ui/core';
 
 const KpButton = props => {
+	const classes = KpButtonStyles();
 	const kpTheme = useTheme();
 	const ref = React.createRef();
+
 	const handleClick = e => {
 		console.log('e: ', e.target);
 		ref.current.focus();
@@ -16,13 +15,13 @@ const KpButton = props => {
 
 	return (
 		<div>
-			<KpBS />
-			<button
-				className={kpTheme.palette.common.black}
+			<Button
 				ref={ref}
 				children={props.children}
 				onClick={handleClick}
-			></button>
+				className={classes.root}
+				label={classes.label}
+			></Button>
 		</div>
 	);
 };

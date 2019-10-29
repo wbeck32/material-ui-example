@@ -15,8 +15,8 @@ class PageContainer extends Component {
 	};
 
 	render() {
-		console.log('this in page container: ', this);
 		const { key } = this.state;
+		console.log('this in page container: ', this);
 		return (
 			<div>
 				<Header />
