@@ -1,8 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+import Header from '../common/Header';
 import Box from '@material-ui/core/Box';
+import BreadCrumb from '../common/Breadcrumb';
+import Footer from '../common/Footer';
+import Sidebar from '../common/Sidebar';
+import ActionArea from '../common/ActionArea';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -34,15 +37,24 @@ export default function PageContainer() {
 					component="div"
 					display="block"
 					className={(classes.header, classes.root)}
-				/>
+				>
+					<Header />
+					<BreadCrumb />
+				</Box>
 			</div>
 			<div>
 				{' '}
-				<Box component="div" display="inline" className={classes.sidebar} />
-				<Box component="div" display="inline" className={classes.actionarea} />
+				<Box component="div" display="inline" className={classes.sidebar}>
+					<Sidebar />
+				</Box>
+				<Box component="div" display="inline" className={classes.actionarea}>
+					<ActionArea />
+				</Box>
 			</div>
 			<div>
-				<Box component="div" display="block" className={classes.footer} />
+				<Box component="div" display="block" className={classes.footer}>
+					<Footer />
+				</Box>
 			</div>
 		</div>
 	);

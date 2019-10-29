@@ -114,8 +114,8 @@ let theme = createMuiTheme({
     primary: {
       light: '',
       main: kpColors.kpBlue,
-      dark: '',
-      contrastText: '',
+      dark: kpColors.midnight,
+      contrastText: kpColors.white,
     },
     secondary: {
       light: '',
@@ -158,14 +158,13 @@ let theme = createMuiTheme({
     htmlFontSize: 16,
     pxToRem: fns.pxToRem,
     round: fns.round,
-    fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif"`,
+    fontFamily: `Gotham 3r`,
     fontSize: 14,
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
     fontWeightBold: 700,
     h1: {
-      fontFamily: `"Roboto", "Helvetica", "Arial", sans-serif"`,
       fontWeight: 300,
       fontSize: '6rem',
       lineHeight: 1,
@@ -235,7 +234,8 @@ let theme = createMuiTheme({
       letterSpacing: '0.01071em',
     },
     button: {
-      fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif"`,
+      fontFamily: `Gotham 3r`,
+
       fontWeight: 500,
       fontSize: '0.875rem',
       lineHeight: 1.75,
@@ -259,7 +259,7 @@ let theme = createMuiTheme({
     },
     spacing: fns.spacing,
     shape: {
-      borderRadius: 4,
+      borderRadius: 0,
     },
     transitions: {
       easing: {

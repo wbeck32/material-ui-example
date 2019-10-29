@@ -1,12 +1,10 @@
 import React from 'react';
-import KpButton from '../formInputs/KpButton';
-import SidebarContainer from '../containers/SidebarContainer';
+import KpPrimaryButton from '../formInputs/KpPrimaryButton';
 
 const ActionArea = () => {
 	return (
 		<div>
-			<SidebarContainer />
-			<KpButton>Primary Button</KpButton>
+			<KpPrimaryButton />
 		</div>
 	);
 };
