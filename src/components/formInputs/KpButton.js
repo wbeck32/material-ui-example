@@ -1,11 +1,7 @@
 import React from 'react';
-import { useTheme } from '@material-ui/core/styles';
-import KpButtonStyles from './KpButtonStyles';
-import { Button } from '@material-ui/core';
+import KpPrimaryButton from './KpPrimaryButton';
 
 const KpButton = props => {
-	const classes = KpButtonStyles();
-	const kpTheme = useTheme();
 	const ref = React.createRef();
 
 	const handleClick = e => {
@@ -15,15 +11,12 @@ const KpButton = props => {
 
 	return (
 		<div>
-			<Button
+			<KpPrimaryButton
 				ref={ref}
 				children={props.children}
 				onClick={handleClick}
-				className={classes.root}
-				label={classes.label}
-			></Button>
+			></KpPrimaryButton>
 		</div>
 	);
 };
-
 export default KpButton;

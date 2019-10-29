@@ -1,10 +1,11 @@
 import React from 'react';
 import KpButton from '../formInputs/KpButton';
+import SidebarContainer from '../containers/SidebarContainer';
 
-const ActionArea = props => {
-	console.log('props in action area: ', props);
+const ActionArea = () => {
 	return (
 		<div>
+			<SidebarContainer />
 			<KpButton>Primary Button</KpButton>
 		</div>
 	);

@@ -1,3 +1,5 @@
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+
 const fns = {
   up: () => {
     console.log('up');
@@ -40,7 +42,47 @@ const fns = {
   },
 };
 
-const theme = {
+const kpColors = {
+  midnight: '#003b71',
+  kpBlue: '#0078b3',
+  sky: '#90cef1',
+  inkyBlue: '#0d1c3d',
+  dolphin: '#677083',
+  white: '#fff',
+  interactiveBlue: '#0078B3',
+  contrastBlue: '#006BA6',
+  interactiveBlueDark: '#003B71',
+  graphiteDark: '#D3D6DC',
+  graphite: '#E9EBEE',
+  graphiteLight: '#F4F5F6',
+  pebble: '#F7F7F7',
+  moss: '#4A7628',
+  grass: '#57A635',
+  leaf: '#A4D751',
+  burntSienna: '#D1480C',
+  tigerLily: '#F36C0D',
+  tangerine: '#FEC941',
+  ocean: '#066564',
+  aqua: '#20A29E',
+  robinEgg: '#7BD3CF',
+  acai: '#BB1654',
+  fuchsia: '#F05674',
+  rose: '#FFA4B4',
+  plum: '#583985',
+  lilac: '#846EAD',
+  lavender: '#B2A8D2',
+  deepRed: '#B63125',
+  black: '#000',
+  deepChalk: '#585858',
+  midChalk: '#666',
+  lightChalk: '#D8D1CA',
+  midAqua: '#CEECFD',
+  lightAqua: '#E9F7FE',
+  paleBlue: '#F0F7FA',
+  motionBlue: '#94DFFF',
+};
+
+let theme = createMuiTheme({
   breakpoints: {
     keys: ['xs', 'sm', 'md', 'lg', 'xl'],
     values: {
@@ -61,26 +103,30 @@ const theme = {
     gutters: fns.gutters,
     toolbar: {},
   },
-  overrides: {
-    button: {
-      border: '5px solid blue',
-    },
-  },
+  overrides: {},
   palette: {
     common: {
-      main: '#ffff',
+      light: '',
+      main: kpColors.kpBlue,
+      dark: kpColors.midnight,
+      contrastText: kpColors.white,
     },
     primary: {
-      midnight: '#003b71',
-      'kp-blue': '#0078b3',
-      sky: '#90cef1',
-      main: '#000000',
+      light: '',
+      main: kpColors.kpBlue,
+      dark: '',
+      contrastText: '',
     },
     secondary: {
-      main: '#f44336',
+      light: '',
+      main: kpColors.kpBlue,
+      dark: '',
+      contrastText: '',
     },
   },
-  props: {},
+  props: {
+    disableRipple: true,
+  },
   shadows: [
     'none',
     '0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)',
@@ -244,6 +290,7 @@ const theme = {
       tooltip: 1500,
     },
   },
-};
+});
+theme = responsiveFontSizes(theme);
 
 export default theme;
