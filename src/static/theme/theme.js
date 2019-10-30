@@ -1,47 +1,5 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
-const fns = {
-  up: () => {
-    console.log('up');
-  },
-  down: () => {
-    console.log('down');
-  },
-  between: () => {
-    console.log('between');
-  },
-  only: () => {
-    console.log('only');
-  },
-  width: () => {
-    console.log('width');
-  },
-  gutters: () => {
-    console.log('gutters');
-  },
-  getContrastText: () => {
-    console.log('getContrastText');
-  },
-  augmentColor: () => {
-    console.log('augmentColor');
-  },
-  pxToRem: () => {
-    console.log('pxToRem');
-  },
-  round: () => {
-    console.log('round');
-  },
-  spacing: () => {
-    console.log('spacing');
-  },
-  create: () => {
-    console.log('create');
-  },
-  getAutoHeightDuration: () => {
-    console.log('getAutoHeightDuration');
-  },
-};
-
 const kpColors = {
   midnight: '#003b71',
   kpBlue: '#0078b3',
@@ -82,6 +40,50 @@ const kpColors = {
   motionBlue: '#94DFFF',
 };
 
+const fns = {
+  up: () => {
+    console.log('up');
+  },
+  down: () => {
+    console.log('down');
+  },
+  between: () => {
+    console.log('between');
+  },
+  only: () => {
+    console.log('only');
+  },
+  width: () => {
+    console.log('width');
+  },
+  gutters: () => {
+    console.log('gutters');
+  },
+  getContrastText: bgColor => {
+    console.log('bgColor: ', bgColor);
+    console.log('getContrastText');
+    // return kpColors.white;
+  },
+  augmentColor: () => {
+    console.log('augmentColor');
+  },
+  pxToRem: () => {
+    console.log('pxToRem');
+  },
+  round: () => {
+    console.log('round');
+  },
+  spacing: () => {
+    console.log('spacing');
+  },
+  create: () => {
+    console.log('create');
+  },
+  getAutoHeightDuration: () => {
+    console.log('getAutoHeightDuration');
+  },
+};
+
 let theme = createMuiTheme({
   breakpoints: {
     keys: ['xs', 'sm', 'md', 'lg', 'xl'],
@@ -101,18 +103,51 @@ let theme = createMuiTheme({
   direction: 'ltr',
   mixins: {
     gutters: fns.gutters,
+
     toolbar: {},
   },
   overrides: {},
   palette: {
-    common: {
-      light: '',
-      main: kpColors.kpBlue,
-      dark: kpColors.midnight,
-      contrastText: kpColors.white,
+    error: {
+      main: kpColors.deepRed,
     },
+    grey: {
+      50: '#fafafa',
+      100: '#f5f5f5',
+      200: '#eeeeee',
+      300: '#e0e0e0',
+      400: '#bdbdbd',
+      500: '#9e9e9e',
+      600: '#757575',
+      700: '#616161',
+      800: '#424242',
+      900: '#212121',
+      A100: '#d5d5d5',
+      A200: '#aaaaaa',
+      A400: '#303030',
+      A700: '#616161',
+    },
+    tonalOffset: 0.2,
+    contrastThreshhold: 3,
+    getContrastText: fns.getContrastText,
+    background: {
+      paper: kpColors.acai,
+      default: kpColors.acai,
+    },
+    common: {
+      white: kpColors.white,
+      black: kpColors.black,
+    },
+    text: {
+      primary: kpColors.inkyBlue,
+      secondary: kpColors.dolphin,
+      disabled: '',
+      hint: '',
+      main: kpColors.white,
+    },
+    divider: {},
     primary: {
-      light: '',
+      light: kpColors.fuchsia,
       main: kpColors.kpBlue,
       dark: kpColors.midnight,
       contrastText: kpColors.white,
@@ -123,10 +158,16 @@ let theme = createMuiTheme({
       dark: '',
       contrastText: '',
     },
+    action: {
+      active: '',
+      hover: '',
+      hoverOpacity: 0.08,
+      selected: '',
+      disabled: '',
+      disabledBackground: '',
+    },
   },
-  props: {
-    disableRipple: true,
-  },
+  props: {},
   shadows: [
     'none',
     '0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)',
@@ -258,8 +299,10 @@ let theme = createMuiTheme({
       textTransform: 'uppercase',
     },
     spacing: fns.spacing,
+
     shape: {
       borderRadius: 0,
+      'border-top-left-radius': 0,
     },
     transitions: {
       easing: {
