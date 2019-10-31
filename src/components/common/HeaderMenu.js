@@ -34,25 +34,23 @@ const HeaderMenu = () => {
 	};
 
 	return (
-		<Typography variant="h3">
-			<HeaderMenuContainer fixed>
-				<HeaderMenuItem component="h3" onClick={handleClick}>
-					Home
-				</HeaderMenuItem>
-				<HeaderMenuItem component="h3" onClick={handleClick}>
-					New request
-				</HeaderMenuItem>
-				<HeaderMenuItem component="h3" onClick={handleClick}>
-					Customers
-				</HeaderMenuItem>
-				<HeaderMenuItem component="h3" onClick={handleClick}>
-					Contacts
-				</HeaderMenuItem>
-				<HeaderMenuItem component="h3" onClick={handleClick}>
-					Configure
-				</HeaderMenuItem>
-			</HeaderMenuContainer>
-		</Typography>
+		<HeaderMenuContainer fixed>
+			<HeaderMenuItem component="button" onClick={handleClick}>
+				Home
+			</HeaderMenuItem>
+			<HeaderMenuItem component="button" onClick={handleClick}>
+				New request
+			</HeaderMenuItem>
+			<HeaderMenuItem component="button" onClick={handleClick}>
+				Customers
+			</HeaderMenuItem>
+			<HeaderMenuItem component="button" onClick={handleClick}>
+				Contacts
+			</HeaderMenuItem>
+			<HeaderMenuItem component="button" onClick={handleClick}>
+				Configure
+			</HeaderMenuItem>
+		</HeaderMenuContainer>
 	);
 };
 

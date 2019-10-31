@@ -10,12 +10,13 @@ const SubHeader = () => {
 			backgroundColor: theme.palette.secondary.light,
 			padding: '25px',
 			margin: 0,
+			color: theme.palette.common.black,
 		},
 	})(({ classes }) => <Box className={classes.root} />);
 
 	return (
 		<div>
-			<SubheaderContainer />
+			<SubheaderContainer>subhead</SubheaderContainer>
 		</div>
 	);
 };

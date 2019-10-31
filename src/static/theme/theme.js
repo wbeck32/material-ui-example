@@ -84,26 +84,14 @@ let theme = createMuiTheme({
     MuiTypography: {
       root: {
         fontFamily: 'Gotham',
-        margin: 0,
-      },
-      body1: {
-        fontSize: 30,
-      },
-      h3: {
-        color: kpColors.alertRed,
-      },
-    },
-    MuiBox: {
-      root: {
-        border: '3px solid orange',
-      },
-      text: {
-        fontSize: '30px',
       },
     },
     MuiButton: {
       root: {
         color: kpColors.statusGreen,
+      },
+      props: {
+        children: {},
       },
     },
   },
@@ -167,7 +155,7 @@ let theme = createMuiTheme({
     htmlFontSize: 16,
     pxToRem: fns.pxToRem,
     round: fns.round,
-    fontFamily: 'Gotham 3r',
+    fontFamily: 'Gotham',
     fontSize: 14,
     fontWeightLight: 300,
     fontWeightRegular: 400,
@@ -234,8 +222,6 @@ let theme = createMuiTheme({
       letterSpacing: '0.01071em',
     },
     button: {
-      fontFamily: `Gotham 3r`,
-
       fontWeight: 500,
       fontSize: '0.875rem',
       lineHeight: 1.75,

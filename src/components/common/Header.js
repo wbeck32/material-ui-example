@@ -2,28 +2,24 @@ import React from 'react';
 import HeaderMenu from './HeaderMenu';
 import SubHeader from './SubHeader';
 import HeaderLogo from './HeaderLogo';
-import { makeStyles, withStyles, useTheme } from '@material-ui/core/styles';
-import { Box } from '@material-ui/core';
-import { Typography } from '@material-ui/core';
+import { withStyles, useTheme } from '@material-ui/core/styles';
+import { Container } from '@material-ui/core';
 
 const Header = () => {
+	const theme = useTheme();
 	const HeaderContainer = withStyles({
 		root: {
 			width: '100%',
+			height: '100px',
 		},
-		label: {},
-	})(({ classes }) => (
-		<div>
+	})(Container);
+
+	return (
+		<HeaderContainer component="div">
 			<HeaderLogo />
 			<HeaderMenu />
 			<SubHeader />
-		</div>
-	));
-
-	return (
-		<div>
-			<HeaderContainer />
-		</div>
+		</HeaderContainer>
 	);
 };
 
