@@ -1,7 +1,11 @@
 import React from 'react';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+import { Breadcrumbs } from '@material-ui/core';
+import { useTheme, withStyles } from '@material-ui/core/styles';
 
 const Breadcrumb = props => {
+	const theme = useTheme();
+
+	const BreadCrumbStyled = withStyles({});
 	return (
 		<nav
 			aria-label="Breadcrumbs"

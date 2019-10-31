@@ -80,7 +80,36 @@ let theme = createMuiTheme({
 
     toolbar: {},
   },
-  overrides: {},
+  overrides: {
+    MuiContainer: {
+      root: {
+        border: '3px solid red',
+        marginRight: 20,
+      },
+    },
+    MuiTypography: {
+      body1: {
+        fontSize: 30,
+      },
+      h3: {
+        color: kpColors.alertRed,
+        fontFamily: 'Gotham',
+      },
+    },
+    MuiBox: {
+      root: {
+        border: '3px solid orange',
+      },
+      text: {
+        fontSize: '30px',
+      },
+    },
+    MuiButtonBase: {
+      root: {
+        color: kpColors.statusGreen,
+      },
+    },
+  },
   palette: {
     grey: {
       50: '#fafafa',
@@ -154,63 +183,54 @@ let theme = createMuiTheme({
       letterSpacing: '-0.01562em',
     },
     h2: {
-      fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif"`,
       fontWeight: 300,
       fontSize: '20px',
       lineHeight: 1,
       letterSpacing: '-0.00833em',
     },
     h3: {
-      fontFamily: 'Gotham 3r',
       fontWeight: 400,
       fontSize: '16px',
-      lineHeight: 1.04,
+      lineHeight: '22px',
       letterSpacing: '0em',
     },
     h4: {
-      fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif"`,
       fontWeight: 400,
       fontSize: '2.125rem',
       lineHeight: 1.17,
       letterSpacing: '0.00735em',
     },
     h5: {
-      fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif"`,
       fontWeight: 400,
       fontSize: '1.5rem',
       lineHeight: 1.33,
       letterSpacing: '0em',
     },
     h6: {
-      fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif"`,
       fontWeight: 500,
       fontSize: '1.25rem',
       lineHeight: 1.6,
       letterSpacing: '0.0075em',
     },
     small: {
-      fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif"`,
       fontWeight: 400,
       fontSize: '10px',
       lineHeight: 1.75,
       letterSpacing: '0.00938em',
     },
     extraSmall: {
-      fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif"`,
       fontWeight: 500,
       fontSize: '8px',
       lineHeight: 1.57,
       letterSpacing: '0.00714em',
     },
     body1: {
-      fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif"`,
       fontWeight: 400,
-      fontSize: '12px',
+      fontSize: '24px',
       lineHeight: 1.5,
       letterSpacing: '0.00938em',
     },
     body2: {
-      fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif"`,
       fontWeight: 400,
       fontSize: '0.875rem',
       lineHeight: 1.43,
@@ -226,14 +246,12 @@ let theme = createMuiTheme({
       textTransform: 'uppercase',
     },
     caption: {
-      fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif"`,
       fontWeight: 400,
       fontSize: '0.75rem',
       lineHeight: 1.66,
       letterSpacing: '0.03333em',
     },
     overline: {
-      fontFamily: `"Roboto", "Helvetica", "Arial", "sans-serif"`,
       fontWeight: 400,
       fontSize: '0.75rem',
       lineHeight: 2.66,

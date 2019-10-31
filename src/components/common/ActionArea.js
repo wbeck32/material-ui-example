@@ -1,6 +1,7 @@
 import React from 'react';
 import KpPrimaryButton from '../formInputs/KpPrimaryButton';
 import { useTheme } from '@material-ui/core/styles';
+import Header from './Header';
 
 const ActionArea = () => {
 	const theme = useTheme();
@@ -9,11 +10,7 @@ const ActionArea = () => {
 		disableRipple: true,
 		theme,
 	};
-	return (
-		<div>
-			<KpPrimaryButton {...props} />
-		</div>
-	);
+	return <div></div>;
 };
 
 export default ActionArea;

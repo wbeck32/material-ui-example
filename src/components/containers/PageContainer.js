@@ -1,17 +1,19 @@
 import React from 'react';
-import HeaderMenu from '../common/HeaderMenu';
+import Header from '../common/Header';
 import ActionArea from '../common/ActionArea';
-import Sidebar from '../common/Sidebar';
 import Footer from '../common/Footer';
-import Grid from '@material-ui/core/Grid';
+import { Container, Typography } from '@material-ui/core';
 
 const PageContainer = () => {
 	return (
 		<div>
-			<HeaderMenu />
-			<Sidebar></Sidebar>
-			<ActionArea></ActionArea>
-			<Footer></Footer>
+			<Typography component="div" variant="body1">
+				<Container>
+					<Header />
+					<ActionArea></ActionArea>
+					<Footer />
+				</Container>
+			</Typography>
 		</div>
 	);
 };

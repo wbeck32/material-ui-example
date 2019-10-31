@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/core/styles';
 import { Container, Button, Typography } from '@material-ui/core';
+
 const HeaderMenu = () => {
 	const theme = useTheme();
 	const HeaderMenuItem = withStyles({
@@ -11,6 +12,10 @@ const HeaderMenu = () => {
 			padding: '25px 20px 25px 20px',
 			textTransform: 'none',
 			fontFamily: theme.typography.h3.fontFamily,
+			'&:hover': {
+				borderBottom: '1px solid red',
+				marginBottom: '5px',
+			},
 		},
 	})(Button);
 
@@ -19,7 +24,7 @@ const HeaderMenu = () => {
 			width: '100%',
 			backgroundColor: theme.palette.primary.dark,
 			color: theme.palette.common.white,
-			margin: '60px 0',
+			margin: 0,
 			fontFamily: theme.typography.h3.fontFamily,
 		},
 	})(Container);
