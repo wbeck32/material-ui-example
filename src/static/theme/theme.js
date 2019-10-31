@@ -81,19 +81,16 @@ let theme = createMuiTheme({
     toolbar: {},
   },
   overrides: {
-    MuiContainer: {
-      root: {
-        border: '3px solid red',
-        marginRight: 20,
-      },
-    },
     MuiTypography: {
+      root: {
+        fontFamily: 'Gotham',
+        margin: 0,
+      },
       body1: {
         fontSize: 30,
       },
       h3: {
         color: kpColors.alertRed,
-        fontFamily: 'Gotham',
       },
     },
     MuiBox: {
@@ -104,7 +101,7 @@ let theme = createMuiTheme({
         fontSize: '30px',
       },
     },
-    MuiButtonBase: {
+    MuiButton: {
       root: {
         color: kpColors.statusGreen,
       },

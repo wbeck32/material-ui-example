@@ -13,14 +13,11 @@ const Header = () => {
 		},
 		label: {},
 	})(({ classes }) => (
-		<Typography variant="h1">
-			<Box>
-				<HeaderLogo />
-				Hello in my font!
-				<HeaderMenu />
-				<SubHeader />
-			</Box>
-		</Typography>
+		<div>
+			<HeaderLogo />
+			<HeaderMenu />
+			<SubHeader />
+		</div>
 	));
 
 	return (
