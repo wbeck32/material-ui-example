@@ -1,45 +1,41 @@
 import React from 'react';
 import { useTheme, withStyles } from '@material-ui/core/styles';
-import { Box, CardMedia } from '@material-ui/core';
+import { Box, CardMedia, Container } from '@material-ui/core';
 
 const HeaderLogo = props => {
 	const theme = useTheme();
 	const LogoContainer = withStyles({
 		root: {
-			width: '50%',
-			height: '300px',
+			width: '100%',
+			height: '100px',
+			backgroundColor: theme.palette.common.white,
 		},
-	})(({ classes }) => <Box className={classes.root} />);
+	})(Container);
 
 	const LogoImage = withStyles({
 		root: {
-			height: '33%',
-			backgroundColor: theme.palette.primary.light,
+			width: '50%',
 		},
-	})(({ classes }) => <CardMedia className={classes.root} />);
+	})(CardMedia);
 
 	const Login = withStyles({
 		root: {
 			width: '50%',
-			backgroundColor: theme.palette.secondary.main,
 		},
-	})(({ classes }) => <Box className={classes.root} />);
+	})(Container);
 
 	return (
-		<div>
-			<LogoContainer>
-				<LogoImage
-					component="span"
-					image="./static/css/assets/images/logo.svg"
-					title="Kaiser Permanente Logo"
-				></LogoImage>
-				<Login>
-					<span id="logout">
-						David | <a href="http://example.com">Logout</a>
-					</span>
-				</Login>
-			</LogoContainer>
-		</div>
+		<LogoContainer maxWidth={false} fixed={true}>
+			<LogoImage
+				height="25"
+				component="img"
+				image="./static/css/assets/images/logo.svg"
+				title="Kaiser Permanente Logo"
+			></LogoImage>
+			<Login maxWidth={false} fixed={true} component="span">
+				David | <a href="http://example.com">Logout</a>
+			</Login>
+		</LogoContainer>
 	);
 };
 

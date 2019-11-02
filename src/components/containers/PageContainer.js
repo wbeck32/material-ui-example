@@ -6,13 +6,11 @@ import { CssBaseline } from '@material-ui/core';
 
 const PageContainer = () => {
 	return (
-		<div>
-			<CssBaseline>
-				<Header />
-				<ActionArea></ActionArea>
-				<Footer />
-			</CssBaseline>
-		</div>
+		<CssBaseline>
+			<Header />
+			<ActionArea></ActionArea>
+			<Footer />
+		</CssBaseline>
 	);
 };
 

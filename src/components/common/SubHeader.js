@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTheme, withStyles } from '@material-ui/core/styles';
-import { Box } from '@material-ui/core';
+import Breadcrumb from './Breadcrumb';
+import { Container } from '@material-ui/core';
 
 const SubHeader = () => {
 	const theme = useTheme();
@@ -12,12 +13,12 @@ const SubHeader = () => {
 			margin: 0,
 			color: theme.palette.common.black,
 		},
-	})(({ classes }) => <Box className={classes.root} />);
+	})(Container);
 
 	return (
-		<div>
-			<SubheaderContainer>subhead</SubheaderContainer>
-		</div>
+		<SubheaderContainer>
+			<Breadcrumb>jkjk</Breadcrumb>
+		</SubheaderContainer>
 	);
 };
 

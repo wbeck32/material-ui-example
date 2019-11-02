@@ -15,7 +15,7 @@ const Header = () => {
 	})(Container);
 
 	return (
-		<HeaderContainer component="div">
+		<HeaderContainer maxWidth={false} fixed={true} component="div">
 			<HeaderLogo />
 			<HeaderMenu />
 			<SubHeader />

@@ -10,11 +10,10 @@ const HeaderMenu = () => {
 			backgroundColor: theme.palette.primary.dark,
 			color: theme.palette.common.white,
 			padding: '25px 20px 25px 20px',
+			fontSize: '1rem',
 			textTransform: 'none',
-			fontFamily: theme.typography.h3.fontFamily,
 			'&:hover': {
 				borderBottom: '1px solid red',
-				marginBottom: '5px',
 			},
 		},
 	})(Button);
