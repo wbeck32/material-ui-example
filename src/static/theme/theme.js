@@ -58,40 +58,24 @@ let theme = createMuiTheme({
       MuiTypography: {
         root: {
           fontFamily: 'GothamHTF',
-        }
-
-        ,
-      }
-
-      ,
+        },
+      },
       MuiButton: {
         root: {
-          color: kpColors.statusGreen,
-        }
-
-        ,
-        label: {}
-
-        ,
-      }
-
-      ,
+          color: '',
+        },
+        label: {},
+      },
       MuiContainer: {
         root: {
           paddingLeft: 0,
           paddingRight: 0,
           fontFamily: 'GothamHTF',
-        }
-
-        ,
+        },
         fixed: {
           minWidth: '100%',
-        }
-
-        ,
-      }
-
-      ,
+        },
+      },
     },
     palette: {
       grey: {
