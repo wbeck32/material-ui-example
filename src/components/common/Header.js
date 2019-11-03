@@ -1,49 +1,25 @@
 import React from 'react';
-import Breadcrumb from './Breadcrumb';
+import HeaderMenu from './HeaderMenu';
+import SubHeader from './SubHeader';
+import HeaderLogo from './HeaderLogo';
+import { withStyles, useTheme } from '@material-ui/core/styles';
+import { Container } from '@material-ui/core';
 
-const Header = props => {
-	const Logo = props => {
-		return (
-			<div className="logoStyle">
-				<span className="image" id="logo">
-					<img
-						src="./static/css/assets/images/KPLogoIconBlue.svg"
-						alt="Kaiser Permanente logo"
-					/>
-				</span>
-				<span id="logout">
-					David | <a href="http://example.com">Logout</a>
-				</span>
-			</div>
-		);
-	};
-	const Menu = props => {
-		return (
-			<div>
-				<div className="styling-6 -book menuStyle">
-					<span className="header-menu-link inlineList">
-						<a href="https://example.com">Request</a>
-					</span>
-					<span className="header-menu-link inlineList">
-						<a href="https://example.com">Customers</a>
-					</span>
-					<span className="header-menu-link inlineList">
-						<a href="https://example.com">Contacts</a>
-					</span>
-					<span className="header-menu-link inlineList">
-						<a href="https://example.com">Configure</a>
-					</span>
-				</div>
-			</div>
-		);
-	};
+const Header = () => {
+	const theme = useTheme();
+	const HeaderContainer = withStyles({
+		root: {
+			width: '100%',
+			height: '100px',
+		},
+	})(Container);
 
 	return (
-		<div className="columns-12">
-			<Logo />
-			<Menu />
-			<Breadcrumb />
-		</div>
+		<HeaderContainer maxWidth={false} fixed={true} component="div">
+			<HeaderLogo />
+			<HeaderMenu />
+			<SubHeader />
+		</HeaderContainer>
 	);
 };
 

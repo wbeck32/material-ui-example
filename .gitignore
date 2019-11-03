@@ -9,6 +9,7 @@ dist/
 .vscode
 unused/
 src/static/css/
+tmp.css
 
 # Runtime data
 pids
