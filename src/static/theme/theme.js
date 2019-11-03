@@ -54,7 +54,45 @@ let theme = createMuiTheme({
     },
     direction: 'ltr',
     mixins: {},
-    overrides: {},
+    overrides: {
+      MuiTypography: {
+        root: {
+          fontFamily: 'GothamHTF',
+        }
+
+        ,
+      }
+
+      ,
+      MuiButton: {
+        root: {
+          color: kpColors.statusGreen,
+        }
+
+        ,
+        label: {}
+
+        ,
+      }
+
+      ,
+      MuiContainer: {
+        root: {
+          paddingLeft: 0,
+          paddingRight: 0,
+          fontFamily: 'GothamHTF',
+        }
+
+        ,
+        fixed: {
+          minWidth: '100%',
+        }
+
+        ,
+      }
+
+      ,
+    },
     palette: {
       grey: {
         50: '#fafafa',
@@ -107,12 +145,12 @@ let theme = createMuiTheme({
     props: {},
     typography: {
       htmlFontSize: 16,
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-      fontSize: 14,
-      fontWeightLight: 300,
+      pxToRem: fns.pxToRem,
+      round: fns.round,
+      fontFamily: 'GothamHTF',
+      fontSize: 16,
       fontWeightRegular: 400,
-      fontWeightMedium: 500,
-      fontWeightBold: 700,
+      fontWeightMedium: 600,
       h1: {
         fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
         fontWeight: 300,
