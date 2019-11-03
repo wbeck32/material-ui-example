@@ -1,7 +1,6 @@
 import React from 'react';
 import HeaderMenu from './HeaderMenu';
 import SubHeader from './SubHeader';
-import HeaderLogo from './HeaderLogo';
 import { withStyles, useTheme } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
 
@@ -16,7 +15,6 @@ const Header = () => {
 
 	return (
 		<HeaderContainer maxWidth={false} fixed={true} component="div">
-			<HeaderLogo />
 			<HeaderMenu />
 			<SubHeader />
 		</HeaderContainer>

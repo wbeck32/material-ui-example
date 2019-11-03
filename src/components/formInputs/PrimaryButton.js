@@ -2,8 +2,8 @@ import React from 'react';
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-const KpPrimaryButton = props => {
-	const KpPrimaryButtonStyled = makeStyles(theme => ({
+const PrimaryButton = props => {
+	const PrimaryButtonStyled = makeStyles(theme => ({
 		root: {
 			color: theme.palette.common.white,
 			margin: 0,
@@ -38,7 +38,7 @@ const KpPrimaryButton = props => {
 		},
 	}));
 	// const ref = React.createRef();
-	const classes = KpPrimaryButtonStyled();
+	const classes = PrimaryButtonStyled();
 	const handleClick = e => {
 		console.log('e: ', e.target);
 		// ref.current.focus();
@@ -55,4 +55,4 @@ const KpPrimaryButton = props => {
 	);
 };
 
-export default KpPrimaryButton;
+export default PrimaryButton;

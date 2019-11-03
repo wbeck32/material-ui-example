@@ -7,7 +7,10 @@ import ThemeTester from '../../static/theme/ThemeTester'
 
 const PageContainer = () => {
 	return (
-		<ThemeTester />
+		<div>
+			<Header />
+			<ThemeTester />
+		</div>
 	);
 };
 
