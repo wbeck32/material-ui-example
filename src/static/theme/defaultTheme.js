@@ -25,7 +25,6 @@ const fns = {
   getContrastText: bgColor => {
     console.log('bgColor: ', bgColor);
     console.log('getContrastText');
-    // return kpColors.white;
   },
   augmentColor: () => {
     console.log('augmentColor');
