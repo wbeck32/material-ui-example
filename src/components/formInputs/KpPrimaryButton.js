@@ -3,14 +3,13 @@ import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const KpPrimaryButton = props => {
-	console.log('theme: ', props.theme);
 	const KpPrimaryButtonStyled = makeStyles(theme => ({
 		root: {
-			color: theme.palette.text.main,
+			color: theme.palette.common.white,
 			margin: 0,
 			overflow: 'visible',
-			'text-transform': 'none',
 			cursor: 'pointer',
+			'text-transform': 'none',
 			backgroundColor: theme.palette.primary.main,
 			'&: hover': '&: focus',
 			'&: active': {
@@ -38,12 +37,11 @@ const KpPrimaryButton = props => {
 				'background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease',
 		},
 	}));
-	const ref = React.createRef();
+	// const ref = React.createRef();
 	const classes = KpPrimaryButtonStyled();
-	console.log('classes: ', classes);
 	const handleClick = e => {
 		console.log('e: ', e.target);
-		ref.current.focus();
+		// ref.current.focus();
 	};
 	return (
 		<div>
