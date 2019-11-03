@@ -47,13 +47,13 @@ const fns = {
   },
 };
 
-let theme = createMuiTheme({
+const theme = createMuiTheme({
   breakpoints: {
     keys: ['xs', 'sm', 'md', 'lg', 'xl'],
     values: {
       xs: 0, sm: 600, md: 960, lg: 1280, xl: 1920
     },
-    direction: 'ltr',
+    direction: ltr,
     mixins: {},
     overrides: {},
     palette: {
@@ -81,8 +81,8 @@ let theme = createMuiTheme({
         default: '',
       },
       common: {
-        white: '#fff',
-        black: '#000',
+        white: '',
+        black: '',
       },
       divider: {
         main: '',
@@ -91,10 +91,16 @@ let theme = createMuiTheme({
         main: '',
       },
       primary: {
-        main: '#000',
+        light: '',
+        main: '',
+        dark: '',
+        contrastText: fns.getContrastText(),
       },
       secondary: {
+        light: '',
         main: '',
+        dark: '',
+        contrastText: fns.getContrastText(),
       },
       action: {
         active: '',
