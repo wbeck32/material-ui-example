@@ -8,7 +8,7 @@ src/static/scss/
 dist/
 .vscode
 unused/
-./src/static/css/
+src/static/css/
 
 # Runtime data
 pids
