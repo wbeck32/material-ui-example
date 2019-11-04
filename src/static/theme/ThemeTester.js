@@ -12,14 +12,6 @@ const ThemeTester = props => {
 			height: '100px'
 		},
 		label: {},
-		colors: {
-			primary: {
-				backgroundColor: primary.dark
-			},
-			secondary: {
-				backgroundColor: secondary.dark
-			}
-		}
 	})
 	const classes = ColorBar();
 	console.log('classes: ', classes, paletteLoop);
@@ -27,10 +19,11 @@ const ThemeTester = props => {
 
 	return (
 		<div className={classes.root}>
-			{paletteLoop.map((backgroundColor, idx) => {
-				return <div key={idx} className={classes.root}>idx, backgroundColor</div>
+			{paletteLoop.map((c, idx) => {
+				console.log('backgdColor:', c);
+				return <div key={idx} style={{ backgroundColor: c.dark }}> idx, c</div>
 			})}
 		</div>
 	);
-};
+}
 export default ThemeTester;
