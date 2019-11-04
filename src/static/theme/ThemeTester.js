@@ -5,8 +5,8 @@ import PageContainer from '../../components/containers/PageContainer';
 
 const ThemeTester = props => {
 	const theme = useTheme();
-	const { primary, secondary } = theme.palette;
-	const paletteLoop = [primary, secondary]
+	const { primary, secondary, action } = theme.palette;
+	const paletteLoop = [{ primary }, { secondary }, { action }]
 	const ColorBar = makeStyles({
 		root: {
 			minHeight: '100px'
@@ -23,20 +23,23 @@ const ThemeTester = props => {
 	})
 	const classes = ColorBar();
 
-	// <div className={classes.colorStripe} key={`${idx}+${c.light}`} style={{ backgroundColor: c.light }}> {i}{index}</div>
 
 	return (
 		<div className={classes.root}>
 			{paletteLoop.map((c, idx) => {
-				let valArr = Object.entries(c)
-				return (valArr.map(i => {
-					console.log('i, index: ', i)
-					return (
-						<div className={classes.colorBlock}>hello</div>
-					)
+				const valArray = Object.entries(c);
+				return valArray.map((m, idx) => {
+					const category = m[0];
+					console.log('category: ', category);
+					const colors = m[1];
+					console.log('colors: ', colors);
+					return (<div key={idx} className={classes.colorBlock}>
+						{c.colorBlock} {idx}
+					</div>)
 				})
-				)
-			})}
+			}
+			)}
+
 		</div>
 	)
 }
