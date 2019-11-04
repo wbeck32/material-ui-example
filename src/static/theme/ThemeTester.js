@@ -9,21 +9,35 @@ const ThemeTester = props => {
 	const paletteLoop = [primary, secondary]
 	const ColorBar = makeStyles({
 		root: {
-			height: '100px'
+			minHeight: '100px'
 		},
 		label: {},
+		colorBlock: {
+			margin: '20px 0'
+		},
+		colorStripe: {
+			height: '30px',
+			margin: '10px 0',
+			color: theme.palette.common.white
+		}
 	})
 	const classes = ColorBar();
-	console.log('classes: ', classes, paletteLoop);
 
+	// <div className={classes.colorStripe} key={`${idx}+${c.light}`} style={{ backgroundColor: c.light }}> {i}{index}</div>
 
 	return (
 		<div className={classes.root}>
 			{paletteLoop.map((c, idx) => {
-				console.log('backgdColor:', c);
-				return <div key={idx} style={{ backgroundColor: c.dark }}> idx, c</div>
+				let valArr = Object.entries(c)
+				return (valArr.map(i => {
+					console.log('i, index: ', i)
+					return (
+						<div className={classes.colorBlock}>hello</div>
+					)
+				})
+				)
 			})}
 		</div>
-	);
+	)
 }
 export default ThemeTester;
