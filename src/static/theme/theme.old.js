@@ -46,7 +46,7 @@ const fns = {
   },
 };
 
-let theme = createMuiTheme({
+const theme = createMuiTheme({
   breakpoints: {
     keys: ['xs', 'sm', 'md', 'lg', 'xl'],
     values: {

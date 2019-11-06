@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-const SelectMenu = props => {
+const ThemedSelectMenu = props => {
 	const {
 		formControlProps,
 		inputControlLabel,
@@ -70,7 +70,7 @@ const SelectMenu = props => {
 	);
 };
 
-SelectMenu.propTypes = {
+ThemedSelectMenu.propTypes = {
 	formControlProps: PropTypes.object,
 	inputControlLabel: PropTypes.string,
 	selectControlProps: PropTypes.object,
@@ -80,4 +80,4 @@ SelectMenu.propTypes = {
 	),
 };
 
-export default SelectMenu;
+export default ThemedSelectMenu;

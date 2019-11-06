@@ -11,7 +11,7 @@ import {
 	TextField,
 	Typography,
 } from '@material-ui/core';
-import SelectMenu from '../formInputs/SelectMenu';
+import SelectMenu from '../formInputs/ThemedSelectMenu';
 
 const FormModal = () => {
 	const theme = useTheme();
