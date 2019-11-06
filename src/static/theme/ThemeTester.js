@@ -18,29 +18,23 @@ const ThemeTester = props => {
 		colorStripe: {
 			height: '30px',
 			margin: '10px 0',
-			color: theme.palette.common.white
 		}
 	})
+
 	const classes = ColorBar();
-
-
 	return (
 		<div className={classes.root}>
 			{paletteLoop.map((c, idx) => {
-				const valArray = Object.entries(c);
-				return valArray.map((m, idx) => {
-					const category = m[0];
-					console.log('category: ', category);
-					const colors = m[1];
-					console.log('colors: ', colors);
-					return (<div key={idx} className={classes.colorBlock}>
-						{c.colorBlock} {idx}
+				const category = Object.keys(c)[0];
+				const colors = Object.entries(Object.entries(c)[0][1])
+				return (
+					<div key={Date.now() / 1000000} className={classes.colorBlock}>
+						colors.map(c => {
+							<div key={Date.now() / 1000000} className={classes.colorStripe}>{category}{Date.now() / 1000000}{c}</div>
+						})
 					</div>)
-				})
-			}
-			)}
+			})}
 
-		</div>
-	)
+		</div>)
 }
 export default ThemeTester;
