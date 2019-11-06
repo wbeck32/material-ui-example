@@ -1,5 +1,5 @@
 import React from 'react';
-import KpButton from '../formInputs/KpButton';
+import ThemedButton from '../formInputs/ThemedButton';
 import { useTheme } from '@material-ui/core/styles';
 
 const ActionArea = () => {

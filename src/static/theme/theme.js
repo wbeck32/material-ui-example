@@ -45,7 +45,7 @@ const fns = {
   },
 };
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   breakpoints: {
     keys: ['xs', 'sm', 'md', 'lg', 'xl'],
     values: {
@@ -93,7 +93,6 @@ const theme = createMuiTheme({
     },
   },
   props: {
-    buttonControlProps: { variant: 'text' },
     MuiButton: {
       fullWidth: true,
     },
@@ -124,29 +123,23 @@ const theme = createMuiTheme({
     getContrastText: fns.getContrastText,
     background: {
       paper: '',
-      default: '',
+      default: '#000',
     },
     common: {
       white: '#fff',
       black: '#000',
     },
     text: {
-      primary: '',
-      secondary: '',
       disabled: '',
-      main: '',
+      main: '#000',
       hint: '',
     },
-    divider: { main: '', },
     primary: {
       main: '#000',
-      dark: '',
       contrastText: '',
     },
     secondary: {
-      light: '',
-      main: '',
-      dark: '',
+      main: '#76ff03',
       contrastText: '',
     },
     action: {
