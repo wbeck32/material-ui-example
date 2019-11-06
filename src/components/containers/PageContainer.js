@@ -1,15 +1,23 @@
 import React from 'react';
-import Header from '../common/Header';
-import ActionArea from '../common/ActionArea';
-import Footer from '../common/Footer';
-import { CssBaseline } from '@material-ui/core';
-import ThemeTester from '../../static/theme/ThemeTester'
+import { makeStyles } from '@material-ui/core/styles';
+import RoutedBreadcrumbs from '../common/RoutedBreadcrumbs';
+import SidebarStepperMenu from '../common/SidebarStepperMenu';
+import FormModal from '../modals/FormModal';
+import SelectMenu from '../formInputs/SelectMenu';
+import KpButton from '../formInputs/KpButton';
+
+const useStyles = makeStyles(theme => ({
+	root: {},
+}));
 
 const PageContainer = () => {
 	return (
-		<div>
-			<ThemeTester />
-		</div>
+		<>
+			<RoutedBreadcrumbs />
+			<FormModal />
+			<SelectMenu />
+			<KpButton buttonText="Click me" />
+		</>
 	);
 };
 
