@@ -65,11 +65,6 @@ let theme = createMuiTheme({
     gutters: fns.gutters,
     toolbar: {},
   },
-  '@global': {
-    '.MuiButton-root': {
-      fontSize: '100px',
-    },
-  },
   overrides: {
     MuiListItem: {
       root: {
@@ -142,15 +137,25 @@ let theme = createMuiTheme({
     },
   },
   typography: {
+    //     font-family: 'Rubik', sans-serif;
+    // font-family: 'Pacifico', cursive;
+    // font-family: 'Quicksand', sans-serif;
+    // font-family: 'Inconsolata', monospace;
+    // font-family: 'Cabin', sans-serif;
+    // font-family: 'VT323', monospace;
+    // font-family: 'Nunito', sans-serif;
+    // font-family: 'Nunito Sans', sans-serif;
+
     htmlFontSize: 16,
     pxToRem: fns.pxToRem,
     round: fns.round,
-    fontFamily: 'GothamHTF',
+    fontFamily: '\'VT323\',monospace',
     fontSize: 16,
     fontWeightLight: 400, //book
     fontWeightRegular: 600, //medium
     fontWeightBold: 800,
     h1: {
+      fontFamily: '\'Rubik\',sans-serif',
       fontWeight: 300,
       fontSize: '1.5rem',
       lineHeight: 1,

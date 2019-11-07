@@ -128,10 +128,10 @@ const RoutedBreadcrumbs = props => {
 											{breadcrumbNameMap[to]}
 										</Typography>
 									) : (
-										<LinkRouter color="inherit" to={to} key={to}>
-											{breadcrumbNameMap[to]}
-										</LinkRouter>
-									);
+											<LinkRouter color="inherit" to={to} key={to}>
+												{breadcrumbNameMap[to]}
+											</LinkRouter>
+										);
 								})}
 							</Breadcrumbs>
 						);
