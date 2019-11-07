@@ -75,7 +75,7 @@ const SidebarStepperMenu = props => {
 				orientation="vertical"
 			>
 				{steps.map((label, index) => (
-					<Step key={label}>
+					<Step key={index}>
 						<StepLabel>{label}</StepLabel>
 						<StepContent>
 							<Typography {...typographyProps}>
@@ -130,16 +130,11 @@ const SidebarStepperMenu = props => {
 };
 
 SidebarStepperMenu.propTypes = {
-	steps: PropTypes.arrayOf(
-		PropTypes.objectOf({
-			label: PropTypes.string,
-			index: PropTypes.number,
-		})
-	),
-	stepperControlProps: {},
-	buttonControlProps: {},
-	paperProps: {},
-	typographyProps: {},
+	steps: PropTypes.array,
+	stepperControlProps: PropTypes.object,
+	buttonControlProps: PropTypes.object,
+	paperProps: PropTypes.object,
+	typographyProps: PropTypes.object,
 };
 
 export default SidebarStepperMenu;

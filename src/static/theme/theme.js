@@ -33,7 +33,6 @@ const fns = {
     console.log('round');
   },
   spacing: num => {
-    // default space value is 8px
     const spacing = 8;
     return num * spacing;
   },
@@ -72,12 +71,6 @@ let theme = createMuiTheme({
     },
   },
   overrides: {
-    MuiCssBaseline: {
-      '@global': {
-        '@font-family': 'GothamHTF',
-      },
-      fontFamily: 'GothamHTF',
-    },
     MuiListItem: {
       root: {
         border: '2px solid red',
@@ -93,9 +86,6 @@ let theme = createMuiTheme({
     },
   },
   props: {
-    MuiButton: {
-      fullWidth: true,
-    },
     MuiButtonBase: {
       disableRipple: true,
       disableTouchRipple: true,
@@ -123,7 +113,7 @@ let theme = createMuiTheme({
     getContrastText: fns.getContrastText,
     background: {
       paper: '',
-      default: '#000',
+      default: '#fff',
     },
     common: {
       white: '#fff',
