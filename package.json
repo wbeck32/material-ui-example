@@ -54,7 +54,7 @@
 		"image-webpack-loader": "^6.0.0",
 		"node-bourbon": "^4.2.8",
 		"node-neat": "^2.0.0-beta.0",
-		"node-sass": "^4.12.0",
+		"node-sass": "^7.0.0",
 		"react-select": "^3.0.8",
 		"webpack": "^4.41.2",
 		"webpack-cli": "^3.3.9",
